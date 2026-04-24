@@ -1,0 +1,27 @@
+[package]
+name         = "rp2350-pizero-linker"
+version      = "0.1.0"
+edition      = "2021"
+authors      = ["Jorge Andre Castro <georgeandrec@gmail.com>"]
+license      = "GPL-2.0-or-later"
+description  = "Zero-config linker and boot support for Waveshare RP2350-PiZero (16MB Flash, RP2350B). Pure no_std infrastructure."
+repository   = "https://github.com/jorgeandrecastro/rp2350-pizero-linker"
+readme       = "README.md"
+keywords     = ["rp2350", "pizero", "waveshare", "linker", "no_std"]
+categories   = ["embedded", "no-std", "development-tools"]
+
+# ── Profils ───────────────────────────────────────────────────────────────────
+
+[profile.release]
+opt-level     = "z"      # Taille minimale — crucial pour le boot block
+lto           = true     # Optimisation globale au lien
+codegen-units = 1        # Maximise la cohérence du binaire
+panic         = "abort"  # Pas de overhead de panic
+strip         = true     # Supprime les symboles de debug
+
+# ── Features ──────────────────────────────────────────────────────────────────
+
+[features]
+default = []
+# On garde ça simple : le but est de linker et booter, point barre.
+# 16MB Flash (W25Q128JVS) et 520KB RAM (RP2350B) définis dans memory.x
