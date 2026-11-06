@@ -1,16 +1,15 @@
 [package]
 name         = "rp2350-pizero-linker"
-version      = "0.1.0"
-edition      = "2021"
+version      = "0.2.0"
+edition      = "2024"
 authors      = ["Jorge Andre Castro <georgeandrec@gmail.com>"]
-license      = "GPL-2.0-or-later"
+license      = "MIT OR Apache-2.0"
 description  = "Zero-config linker and boot support for Waveshare RP2350-PiZero (16MB Flash, RP2350B). Pure no_std infrastructure."
 repository   = "https://github.com/jorgeandrecastro/rp2350-pizero-linker"
 readme       = "README.md"
 keywords     = ["rp2350", "pizero", "waveshare", "linker", "no_std"]
 categories   = ["embedded", "no-std", "development-tools"]
 
-# ── Profils ───────────────────────────────────────────────────────────────────
 
 [profile.release]
 opt-level     = "z"      # Taille minimale — crucial pour le boot block
@@ -19,7 +18,6 @@ codegen-units = 1        # Maximise la cohérence du binaire
 panic         = "abort"  # Pas de overhead de panic
 strip         = true     # Supprime les symboles de debug
 
-# ── Features ──────────────────────────────────────────────────────────────────
 
 [features]
 default = []

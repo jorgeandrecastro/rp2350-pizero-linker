@@ -1,5 +1,5 @@
 [![Crates.io](https://img.shields.io/crates/v/rp2350-pizero-linker.svg)](https://crates.io/crates/rp2350-pizero-linker)
-[![License: GPL-2.0-or-later](https://img.shields.io/badge/License-GPL_2.0_or_later-blue.svg)](https://opensource.org/licenses/GPL-2.0)
+[![License: MIT OR Apache-2.0](https://img.shields.io/badge/License-MIT%20or%20Apache--2.0-blue.svg)](https://opensource.org/licenses/MIT)
 [![docs.rs](https://docs.rs/rp2350-pizero-linker/badge.svg)](https://docs.rs/rp2350-pizero-linker)
 
 # 🦅 rp2350-pizero-linker
@@ -30,7 +30,7 @@ Ajoutez ceci à votre `Cargo.toml` :
 
 ```toml
 [dependencies]
-rp2350-pizero-linker = "0.1.0"
+rp2350-pizero-linker = "0.2"
 ```
 
 ----
@@ -119,10 +119,16 @@ Lancer : `./flash.sh`
 
 ----
 
-## 🛡 Licence
+## 🛡️ License
 
-Ce projet est sous licence **GPL-2.0-or-later**.
-Protection de l'infrastructure open-source pour la communauté.
+Licensed under either of:
+
+    MIT license (http://opensource.org/licenses/MIT)
+
+    Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0)
+
+at your option.
+
 
 ----
 
